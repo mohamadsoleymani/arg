@@ -6,6 +6,7 @@ import NativeSelect from "@mui/material/NativeSelect";
 import DateRange from "./DateRange";
 import { useDispatch, useSelector } from "react-redux";
 import { filterDate } from "../redux/filter/DataSlice";
+import { filterChart } from "../redux/filter/ChartSlice";
 
 
 const Option = () => {
@@ -21,10 +22,11 @@ const Option = () => {
 
   const handleBrokerSelected = (e) => {
     dispatch(filterDate({ broker: e.target.value }));
+    dispatch(filterChart({ broker: e.target.value }))
   };
 
   return (
-    <div className="gap-20 pt-8 pb-10 px-10 flex-wrap flex flex-col md:flex-row">
+    <div className="gap-20 pt-8 pb-10 px-10 mx-[-40px] flex-wrap  flex flex-col md:flex-row ">
       <Box sx={{ minWidth: 120 }}>
         <FormControl fullWidth>
           <InputLabel variant="standard" htmlFor="uncontrolled-native">

@@ -37,7 +37,7 @@ const ChartSlice = createSlice({
       // console.log(state.endDate, state.startDate);
 
       state.data = dataFakes.data.filter((item) => {
-        const date = moment(item.releaseDate, "jYYYY/jMM/jDD");
+        const date = moment(item.date,"jYYYY/jMM/jDD");
 
         let flag = true;
 

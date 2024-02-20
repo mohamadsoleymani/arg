@@ -7,11 +7,11 @@ import Sidebar from "./Sidebar";
 
 const SubHeader = () => {
   // const [nav, setNav] = useState(false);
-  const { nav, opneNav } = useContext(NavContext);
+  const { opneNav } = useContext(NavContext);
   // const handleNav = () => {
   //   setNav(!nav);
   // };
-  console.log(nav);
+  // console.log(nav);
   return (
     <div>
       <div className="hidden md:block">

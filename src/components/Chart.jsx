@@ -12,6 +12,7 @@ import { useSelector } from "react-redux";
 
 const Chart = () => {
   const data = useSelector((state) => state.allDataChart.data);
+  // console.log(data);
   return (
     <div className="h-[500px]">
       <ResponsiveContainer width="100%" height="100%">
