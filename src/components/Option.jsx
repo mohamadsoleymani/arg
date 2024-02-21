@@ -7,26 +7,26 @@ import DateRange from "./DateRange";
 import { useDispatch, useSelector } from "react-redux";
 import { filterDate } from "../redux/filter/DataSlice";
 import { filterChart } from "../redux/filter/ChartSlice";
+import classNames from "classnames";
 
 
-const Option = () => {
-  // const [nav, setNav] = useState(false);
 
-  // const handleNav = () => {
-  //   setNav(!nav);
-  // };
+// eslint-disable-next-line react/prop-types
+const Option = ({className}) => {
 
   const { brokers } = useSelector((state) => state.allData);
 
   const dispatch = useDispatch();
 
   const handleBrokerSelected = (e) => {
-    dispatch(filterDate({ broker: e.target.value }));
+
+    dispatch(filterDate({ broker: e.target.value }))
     dispatch(filterChart({ broker: e.target.value }))
+    
   };
 
   return (
-    <div className="gap-20 pt-8 pb-10 px-10 mx-[-40px] flex-wrap  flex flex-col md:flex-row ">
+    <div className={classNames("gap-20 pt-8 pb-10 w-9 flex-wrap  flex flex-col md:flex-row md:w-full", className, {})}>
       <Box sx={{ minWidth: 120 }}>
         <FormControl fullWidth>
           <InputLabel variant="standard" htmlFor="uncontrolled-native">
@@ -74,7 +74,7 @@ const Option = () => {
             }}
             onClick={handleBrokerSelected}
           >
-            <option value="">همه</option>
+            <option value='empty'>همه</option>
             {brokers.map((broker, i) => (
               <option key={`broker-${i}`} value={broker}>
                 {broker}
@@ -92,3 +92,4 @@ const Option = () => {
 };
 
 export default Option;
+

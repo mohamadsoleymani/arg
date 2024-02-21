@@ -6,8 +6,10 @@ import persian_fa from "react-date-object/locales/persian_fa";
 import { useDispatch } from "react-redux";
 import { filterDate } from "../redux/filter/DataSlice";
 import { filterChart } from "../redux/filter/ChartSlice";
+import "react-multi-date-picker/styles/layouts/mobile.css"
 
 const DateRange = () => {
+ 
   const dispatch = useDispatch();
   const [values, setValues] = useState([]);
 
@@ -36,6 +38,7 @@ const DateRange = () => {
         calendarPosition="bottom-right"
         locale={persian_fa}
         calendar={persian}
+        className="rmdp-mobile"
         inputClass="p-4 w-[13.7rem] text-md bg-inherit border-b-1 pb-2 outline-none text-center border-b border-[#0000006b] "
       />
     </div>
