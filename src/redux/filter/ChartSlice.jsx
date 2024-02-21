@@ -21,7 +21,7 @@ const ChartSlice = createSlice({
      */
     filterChart: (state, action) => {
       moment.locale("fa");
-      if (action.payload?.broker || action.payload.broker === "") {
+      if (action.payload?.broker) {
         state.broker = action.payload.broker;
       }
       if (action.payload?.startDate) {
@@ -54,7 +54,7 @@ const ChartSlice = createSlice({
         }
 
         if (state.broker) {
-          flag = flag && (state.broker == "" || item.broker === state.broker);
+          flag = flag && (state.broker == "empty" || item.broker === state.broker);
         }
         return flag;
       });
