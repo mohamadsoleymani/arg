@@ -1,8 +1,10 @@
 import classNames from "classnames";
 import { NavLink, useLocation } from "react-router-dom";
 
+import logo from '../assets/logo2.png';
+
 // eslint-disable-next-line react/prop-types
-const NavItem = ({ text, url,isLeft }) => {
+const NavItem = ({ text, url, isLeft }) => {
   const pathname = useLocation().pathname;
   return (
     <NavLink
@@ -20,11 +22,14 @@ const NavItem = ({ text, url,isLeft }) => {
 
 const Header = () => {
   return (
-    <div className="sm:w-full flex flex-wrap items-center gap-2 justify-between border-b-2 pb-8">
-      <h1 className="text-blue-700 font-bold text-3xl">ارگ</h1>
+    <div className="sm:w-full flex flex-wrap items-center gap-2 justify-between border-b-2 pb-3">
+      <div className="flex items-center gap-5 font-bold">
+        <img src={logo} className="w-[4.5rem]" />
+        <h1 className="sm:text-xl">شرکت کارگزاری ا رگ</h1>
+      </div>
       <div className="flex sm:gap-2">
         <NavItem url="/" text="اطلاعات عرضه" />
-        <NavItem url="/moamelat" text="اطلاعات معاملات فیزیکی" isLeft/>
+        <NavItem url="/moamelat" text="اطلاعات معاملات فیزیکی" isLeft />
       </div>
     </div>
   );
