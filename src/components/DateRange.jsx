@@ -17,7 +17,6 @@ const DateRange = () => {
     let startDate = undefined;
     let endDate = undefined;
     
-    //console.log(values);
     if (values.length > 0 && values[0]) {
       startDate = values[0].toDate().toString();
       endDate = (values.length > 1 && values[1] ? values[1] : values[0]).toDate().toString();
