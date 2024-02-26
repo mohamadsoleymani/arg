@@ -11,7 +11,7 @@ const Home = () => {
       {data.length > 0 ? (
         <Table />
       ) : (
-        <div className="flex flex-col m-auto items-center">
+        <div className="flex flex-col m-auto items-center md:my-[-20px]">
           <img src={empty} className="w-[250px] h-[250px] mt-16"></img>
           <p className="text-sm font-bold mt-5 sm:text-lg">اطلاعات مورد نظر در این بازه زمانی وجود ندارد</p>
         </div>

@@ -34,8 +34,9 @@ const Option = ({ className }) => {
     removeWaterMark();
     //console.log(values);
     if (values.length > 0 && values[0]) {
-      startDate = moment(values[0]).locale("fa").format("jYYYY-jMM-jDD");
-      console.log("start", startDate);
+      startDate = moment(values[0]).locale("fa").format("jYYYY-jMM-jDD")
+      
+      console.log("start", startDate)
       endDate = (
         values.length > 1 && moment(values[1])
           ? moment(values[1])
