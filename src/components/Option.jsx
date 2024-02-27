@@ -14,7 +14,7 @@ import { AdapterDateFnsJalali } from "@mui/x-date-pickers/AdapterDateFnsJalali";
 import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
 import { useState, useEffect } from "react";
 import { removeWaterMark } from "../tools/ui";
-import moment from "moment";
+import moment from "jalali-moment";
 
 // eslint-disable-next-line react/prop-types
 const Option = ({ className }) => {
@@ -34,22 +34,18 @@ const Option = ({ className }) => {
     removeWaterMark();
     //console.log(values);
     if (values.length > 0 && values[0]) {
-      startDate = moment(values[0]).locale("fa").format("jYYYY-jMM-jDD");
-      console.log("start", startDate);
+      startDate = moment(values[0]).format('YYYY/MM/DD')
       endDate = (
         values.length > 1 && moment(values[1])
           ? moment(values[1])
           : moment(values[0])
-      ).format("jYYYY-jMM-jDD");
+      );
+      console.log("start", startDate);
       console.log("end", endDate);
     }
     dispatch(filterDate({ startDate, endDate }));
     dispatch(filterChart({ startDate, endDate }));
   }, [values, dispatch]);
-
-  // useEffect(() => {
-  //   removeWaterMark();
-  // }, []);
 
   return (
     <div
@@ -100,7 +96,7 @@ const Option = ({ className }) => {
       </FormControl>
       <LocalizationProvider dateAdapter={AdapterDateFnsJalali}>
         <DateRangePicker
-          onChange={(e) => setValues(e)}
+          onChange={(e) => setValues(e)}  
           className="w-full"
           localeText={{ start: "از تاریخ", end: "تا تاریخ" }}
         />
