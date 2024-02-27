@@ -1,6 +1,5 @@
 import { MantineReactTable, useMantineReactTable } from "mantine-react-table";
 import { useSelector } from "react-redux";
-// import { filterDate, sortData } from "../redux/filter/DataSlice";
 
 const columns = [
   {
@@ -41,7 +40,7 @@ const columns = [
   },
 ];
 
-const Table = () => {
+const ArzeTable = () => {
   const data = useSelector((state) => state.allData.data);
 
   const table = useMantineReactTable({
@@ -98,4 +97,4 @@ const Table = () => {
   );
 };
 
-export default Table;
+export default ArzeTable;
