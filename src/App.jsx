@@ -1,7 +1,4 @@
 import { Routes , Route } from "react-router-dom";
-// import Header from "./components/Header";
-// import Option from "./components/Option";
-// import Table from "./components/Table";
 import Home from "./pages/Home";
 import Moamelat from "./pages/Moamelat";
 import Header from "./components/Header";
