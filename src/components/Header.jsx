@@ -13,7 +13,7 @@ const NavItem = ({ text, url, isLeft }) => {
         "!bg-green-600 !text-white": pathname === url,
         'rounded-l-3xl': isLeft,
         'rounded-r-3xl': !isLeft
-      }, "sm:w-fit  sm:bg-transparent max-sm:bg-white max-sm:p-4 max-sm:w-[20rem] max-sm:border-gray-200 max-sm:rounded-none max-sm:  text-center text-[13px] sm:text-[15px] hover:bg-green-700 text-green-700 font-semibold hover:text-white py-2 px-7 border border-green-500 transition-all hover:border-transparent sm:rounded-full")}
+      }, "sm:w-fit sm:bg-transparent max-sm:bg-white max-sm:p-4 max-sm:w-[20rem] max-sm:border-gray-200 max-sm:rounded-none max-sm:  text-center text-[13px] sm:text-[15px] hover:bg-green-700 text-green-700 font-semibold hover:text-white py-2 px-7 border border-green-500 transition-all hover:border-transparent sm:rounded-full")}
     >
       {text}
     </NavLink>
