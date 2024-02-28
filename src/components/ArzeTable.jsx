@@ -61,6 +61,20 @@ const ArzeTable = () => {
       },
     },
 
+    mantineTableBodyProps: {
+      sx: {
+        fontFamily: "Yekan, sans-serif",
+      },
+    },
+
+    mantineTableHeadProps:{
+      sx:{
+        fontFamily: "Yekan, sans-serif",
+      }
+    },
+
+    
+
     columnResizeDirection: "rtl",
     enableColumnResizing: true,
     mantinePaginationProps: {

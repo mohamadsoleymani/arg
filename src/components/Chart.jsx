@@ -34,7 +34,7 @@ const Chart = () => {
           <Tooltip />
           <Legend  />
           <CartesianGrid strokeDasharray="3 3" />
-          <Bar dataKey="arzePrice" fill="#309d29" />
+          <Bar dataKey="arzePrice" fill="#0069ff" />
         </BarChart>
       </ResponsiveContainer>
     </div>

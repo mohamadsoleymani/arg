@@ -2,20 +2,21 @@ import classNames from "classnames";
 import { NavLink, useLocation } from "react-router-dom";
 
 import logo from '../assets/logo2.png';
+import {  Note, TransactionMinus } from "iconsax-react";
 
 // eslint-disable-next-line react/prop-types
-const NavItem = ({ text, url, isLeft }) => {
+const NavItem = ({ text, url , icon}) => {
   const pathname = useLocation().pathname;
   return (
     <NavLink
       to={url}
       className={classNames({
-        "!bg-green-600 !text-white": pathname === url,
-        'rounded-l-3xl': isLeft,
-        'rounded-r-3xl': !isLeft
-      }, "sm:w-fit  sm:bg-transparent max-sm:bg-white max-sm:p-4 max-sm:w-[20rem] max-sm:border-gray-200 max-sm:rounded-none max-sm:  text-center text-[13px] sm:text-[15px] hover:bg-green-700 text-green-700 font-semibold hover:text-white py-2 px-7 border border-green-500 transition-all hover:border-transparent sm:rounded-full")}
+        "!bg-primary !text-white": pathname === url,
+      }, "sm:w-fit sm:flex sm:gap-3 sm:items-center sm:justify-center sm:bg-transparent max-sm:flex max-sm:gap-2 max-sm:items-center max-sm:justify-center max-sm:bg-white max-sm:p-4 max-sm:w-[20rem] max-sm:border-gray-200 max-sm:rounded-none max-sm:  text-center text-[10px] sm:text-[15px] hover:bg-primary  text-textPrimary hover:text-white py-2 px-7 border border-textPrimary transition-all hover:border-transparent sm:rounded-[4px]")}
     >
+      {icon}
       {text}
+      
     </NavLink>
   );
 };
@@ -27,8 +28,8 @@ const Header = () => {
         <img src={logo} className="w-[4.5rem] cursor-pointer" />
       </div>
       <div className="flex sm:gap-2 max-sm:fixed bottom-0 left-0 right-0 z-10">
-        <NavItem url="/" text="اطلاعات عرضه" />
-        <NavItem url="/moamelat" text="اطلاعات معاملات فیزیکی" isLeft />
+        <NavItem url="/" text="اطلاعات عرضه" icon={<Note />}/>
+        <NavItem url="/moamelat" text="اطلاعات معاملات فیزیکی" icon={<TransactionMinus />}/>
       </div>
     </div>
   );

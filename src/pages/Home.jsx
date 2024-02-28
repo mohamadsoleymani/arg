@@ -1,6 +1,6 @@
-import Table from "../components/ArzeTable";
 import empty from "../assets/7486744.png";
 import { useSelector } from "react-redux";
+import ArzeTable from "../components/ArzeTable";
 
 const Home = () => {
 
@@ -9,15 +9,10 @@ const Home = () => {
   return (
     <div>
       {data.length > 0 ? (
-        <Table />
+        <ArzeTable />
       ) : (
-<<<<<<< HEAD
-        <div className="flex flex-col m-auto items-center">
-          <img src={empty} className="w-[250px] h-[250px] mt-20"></img>
-=======
-        <div className="flex flex-col m-auto items-center md:my-[-20px]">
-          <img src={empty} className="w-[250px] h-[250px] mt-16"></img>
->>>>>>> 39d1245 (add p in app)
+        <div className="flex flex-col md:mb-[354px]  items-center">
+          <img src={empty} className="w-[150px] h-[150px] sm:w-[250px] sm:h-[250px] mt-20"></img>
           <p className="text-sm font-bold mt-5 sm:text-lg">اطلاعات مورد نظر در این بازه زمانی وجود ندارد</p>
         </div>
       )}
