@@ -1,9 +1,5 @@
-// import { useState } from "react";
-// import Box from "@mui/material/Box";
 import InputLabel from "@mui/material/InputLabel";
 import FormControl from "@mui/material/FormControl";
-// import NativeSelect from "@mui/material/NativeSelect";
-// import DateRange from "./DateRange";
 import { useDispatch, useSelector } from "react-redux";
 import { filterDate } from "../redux/filter/DataSlice";
 import { filterChart } from "../redux/filter/ChartSlice";
@@ -32,19 +28,15 @@ const Option = ({ className }) => {
     let startDate = undefined;
     let endDate = undefined;
     removeWaterMark();
-    //console.log(values);
+
     if (values.length > 0 && values[0]) {
       startDate = moment(values[0]).format('YYYY/MM/DD')
-      endDate = (
-        values.length > 1 && moment(values[1])
-          ? moment(values[1])
-          : moment(values[0])
-      );
-      console.log("start", startDate);
-      console.log("end", endDate);
+      endDate = moment(values.length > 1 && values[1] ? values[1] : values[0]).format('YYYY/MM/DD')
     }
+
     dispatch(filterDate({ startDate, endDate }));
     dispatch(filterChart({ startDate, endDate }));
+    
   }, [values, dispatch]);
 
   return (
@@ -101,9 +93,6 @@ const Option = ({ className }) => {
           localeText={{ start: "از تاریخ", end: "تا تاریخ" }}
         />
       </LocalizationProvider>
-      {/* <div onClick={handleNav} className="md:hidden">
-        <Filter />
-      </div> */}
     </div>
   );
 };

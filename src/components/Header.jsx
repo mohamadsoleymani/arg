@@ -24,8 +24,7 @@ const Header = () => {
   return (
     <div className="sm:w-full flex flex-wrap items-center gap-2 justify-between border-b-2 pb-3">
       <div className="flex items-center gap-5 font-bold">
-        <img src={logo} className="w-[4.5rem]" />
-        {/* <h1 className="sm:text-xl">شرکت کارگزاری ا رگ</h1> */}
+        <img src={logo} className="w-[4.5rem] cursor-pointer" />
       </div>
       <div className="flex sm:gap-2">
         <NavItem url="/" text="اطلاعات عرضه" />

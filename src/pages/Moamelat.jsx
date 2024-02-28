@@ -1,5 +1,5 @@
 import Chart from "../components/Chart";
-import Table2 from "../components/Table2";
+import Table2 from "../components/MoamelatTable";
 import { useSelector } from "react-redux";
 
 import empty from "../assets/7486744.png";

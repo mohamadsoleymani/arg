@@ -56,7 +56,7 @@ const columns = [
   },
 ];
 
-const Table2 = () => {
+const MoamelatTable = () => {
   const dataChart = useSelector((state) => state.allDataChart.data);
 
   const table = useMantineReactTable({
@@ -113,4 +113,4 @@ const Table2 = () => {
   );
 };
 
-export default Table2;
+export default MoamelatTable;

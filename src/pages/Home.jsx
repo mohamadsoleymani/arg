@@ -1,4 +1,4 @@
-import Table from "../components/Table";
+import Table from "../components/ArzeTable";
 import empty from "../assets/7486744.png";
 import { useSelector } from "react-redux";
 
