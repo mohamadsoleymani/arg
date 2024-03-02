@@ -90,6 +90,18 @@ const MoamelatTable = () => {
       className: "mt-3",
     },
 
+    mantineTableBodyProps: {
+      sx: {
+        fontFamily: "Yekan, sans-serif",
+      },
+    },
+
+    mantineTableHeadProps:{
+      sx:{
+        fontFamily: "Yekan, sans-serif",
+      }
+    },
+
     paginationDisplayMode: "pages",
     positionGlobalFilter: "left",
     enableStickyHeader: "true",

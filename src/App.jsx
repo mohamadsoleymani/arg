@@ -16,7 +16,7 @@ const theme = (outerTheme) =>
       mode: outerTheme.palette.mode,
     },
     typography:{
-      fontFamily: 'Yekan, sans-serif'
+      fontFamily: 'Yekan, sans-serif',
     }
   });
 
