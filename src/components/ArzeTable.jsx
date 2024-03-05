@@ -1,4 +1,5 @@
 import { MantineReactTable, useMantineReactTable } from "mantine-react-table";
+// import { MRT_Localization_FA } from 'mantine-react-table/locales/fa';
 import { useSelector } from "react-redux";
 
 const columns = [
@@ -64,29 +65,32 @@ const ArzeTable = () => {
     mantineTableBodyProps: {
       sx: {
         fontFamily: "Yekan, sans-serif",
+        color: "#2D3142",
       },
     },
 
-    mantineTableHeadProps:{
-      sx:{
-        fontFamily: "Yekan, sans-serif",
-      }
-    },
 
-    
+
+    mantineTableHeadProps: {
+      sx: {
+        fontFamily: "Yekan, sans-serif",
+        color: "#2D3142",
+      },
+    },
 
     columnResizeDirection: "rtl",
     enableColumnResizing: true,
     mantinePaginationProps: {
       rowsPerPageOptions: ["20", "50", "100"],
       className: "active-pagination-table",
+      color:'#0069ff',
+      //showRowsPerPage:false
+      
     },
+
 
     layoutMode: "grid",
 
-    muiTableProps: {
-      className: "mt-3",
-    },
 
     paginationDisplayMode: "pages",
     positionGlobalFilter: "left",
@@ -94,6 +98,8 @@ const ArzeTable = () => {
     mantineTableProps: {
       highlightOnHover: true,
       withColumnBorders: true,
+      striped:true,
+      className:'mt-2',
     },
 
     mantinePaperProps: {
@@ -106,7 +112,11 @@ const ArzeTable = () => {
 
   return (
     <div className="my-5">
-      <MantineReactTable table={table} enableStickyFooter />
+      <MantineReactTable
+        table={table}
+        enableStickyFooter
+        // localization={MRT_Localization_FA}
+      />
     </div>
   );
 };

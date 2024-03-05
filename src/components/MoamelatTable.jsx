@@ -82,6 +82,7 @@ const MoamelatTable = () => {
     mantinePaginationProps: {
       rowsPerPageOptions: ["20", "50", "100"],
       className: "active-pagination-table",
+      color:'#0069ff'
     },
 
     layoutMode: "grid",
@@ -93,12 +94,14 @@ const MoamelatTable = () => {
     mantineTableBodyProps: {
       sx: {
         fontFamily: "Yekan, sans-serif",
+        color:'#2D3142'
       },
     },
 
     mantineTableHeadProps:{
       sx:{
         fontFamily: "Yekan, sans-serif",
+        color:'#2D3142'
       }
     },
 
@@ -108,6 +111,8 @@ const MoamelatTable = () => {
     mantineTableProps: {
       highlightOnHover: true,
       withColumnBorders: true,
+      striped:true,
+      className:'mt-2',
     },
 
     mantinePaperProps: {
