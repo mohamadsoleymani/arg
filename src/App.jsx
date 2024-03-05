@@ -14,6 +14,9 @@ const theme = (outerTheme) =>
     direction: 'rtl',
     palette: {
       mode: outerTheme.palette.mode,
+      // primary: {
+      //   main : '#2D3142'
+      // }
     },
     typography:{
       fontFamily: 'Yekan, sans-serif',
