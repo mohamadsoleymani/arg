@@ -82,6 +82,7 @@ const MoamelatTable = () => {
     mantinePaginationProps: {
       rowsPerPageOptions: ["20", "50", "100"],
       className: "active-pagination-table",
+      color:'#0069ff'
     },
 
     layoutMode: "grid",

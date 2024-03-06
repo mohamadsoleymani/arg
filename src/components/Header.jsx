@@ -25,7 +25,7 @@ const NavItem = ({ text, url, icon }) => {
 
 const Header = () => {
   return (
-    <div className="sm:w-full flex flex-wrap items-center gap-2 justify-between border-b-2 pb-3 sm:sticky sm:top-0  sm:backdrop-blur-sm sm:bg-white/70 sm:z-10">
+    <div className="sm:w-full flex flex-wrap items-center gap-2 justify-between border-b-2 pb-3 sm:sticky sm:top-0  sm:backdrop-blur-md sm:bg-white/60 sm:z-10">
       <div className="flex m-auto sm:mx-[1px] gap-5 font-bold">
         <img src={logo} className="w-[4.5rem] cursor-pointer" />
       </div>
