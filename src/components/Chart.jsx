@@ -30,11 +30,11 @@ const Chart = () => {
           barSize={50}
         >
           <XAxis dataKey="date" padding={{ left: 0, right: 0 }} />
-          <YAxis  dataKey="arzePrice" tickMargin={40} />
+          <YAxis tickMargin={40} />
           <Tooltip />
           <Legend  />
           <CartesianGrid strokeDasharray="3 3" />
-          <Bar dataKey="arzePrice" fill="#0069ff" />
+          <Bar dataKey="arzePrice" fill="#0069ff" className="" name="قیمت عرضه" />
         </BarChart>
       </ResponsiveContainer>
     </div>
