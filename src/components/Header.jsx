@@ -14,7 +14,7 @@ const NavItem = ({ text, url, icon }) => {
         {
           "!bg-primary !border-primary !text-white": pathname === url,
         },
-        "sm:w-fit sm:flex sm:gap-3 sm:items-center sm:justify-center sm:bg-transparent max-sm:flex max-sm:gap-2 max-sm:items-center max-sm:justify-center max-sm:bg-white max-sm:p-2 max-sm:w-[20rem] max-sm:border-gray-200 max-sm:rounded-none max-sm:  text-center text-[10px] sm:text-[15px] hover:bg-primary  text-textPrimary hover:text-white py-2 px-7 border border-textPrimary transition-all hover:border-transparent sm:rounded-[4px]"
+        "sm:w-fit sm:flex hover:shadow-lg hover:shadow-gray-300 sm:gap-3 sm:items-center sm:justify-center sm:bg-transparent max-sm:flex max-sm:gap-2 max-sm:items-center max-sm:justify-center max-sm:bg-white max-sm:p-2 max-sm:w-[20rem] max-sm:border-gray-200 max-sm:rounded-none max-sm:  text-center text-[10px] sm:text-[15px] hover:bg-primary  text-textPrimary hover:text-white py-2 px-7 border border-textPrimary transition-all hover:border-transparent sm:rounded-[4px]"
       )}
     >
       {icon}

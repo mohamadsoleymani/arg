@@ -66,10 +66,9 @@ const ArzeTable = () => {
       sx: {
         fontFamily: "Yekan, sans-serif",
         color: "#2D3142",
+        fontSize:'1rem'
       },
     },
-
-
 
     mantineTableHeadProps: {
       sx: {
@@ -83,14 +82,11 @@ const ArzeTable = () => {
     mantinePaginationProps: {
       rowsPerPageOptions: ["20", "50", "100"],
       className: "active-pagination-table",
-      color:'#0069ff',
+      color: "#0069ff",
       //showRowsPerPage:false
-      
     },
 
-
     layoutMode: "grid",
-
 
     paginationDisplayMode: "pages",
     positionGlobalFilter: "left",
@@ -98,8 +94,8 @@ const ArzeTable = () => {
     mantineTableProps: {
       highlightOnHover: true,
       withColumnBorders: true,
-      striped:true,
-      className:'mt-2',
+      striped: true,
+      className: "mt-2",
     },
 
     mantinePaperProps: {
