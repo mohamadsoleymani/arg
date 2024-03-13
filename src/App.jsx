@@ -41,7 +41,9 @@ function App() {
             <Route path="moamelat" element={<Moamelat />} />
           </Routes>
         </div>
+        <div className="relative bottom-0">
         <Footer />
+        </div>
       </ThemeProvider>
     </CacheProvider>
   );

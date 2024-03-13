@@ -2,12 +2,39 @@ import { createSlice } from "@reduxjs/toolkit";
 import dataFakes from "../../dataTable.json";
 import moment from "jalali-moment";
 
+/**
+ * @returns {Date[]|undefined}
+ */
+const datesList = () => {
+  return dataFakes.data?.map(data => moment(data.releaseDate, 'jYYYY/jMM/jDD').toDate()).sort((a, b) => a - b);
+}
+
+/**
+ * @returns {import("jalali-moment").Moment|undefined}
+ */
+export const firstDate = () => {
+  const date = lastDates();
+  if (!date) return undefined;
+  const d = date.subtract(5, "days");
+  return d;
+}
+
+/**
+ * @returns {import("jalali-moment").Moment|undefined}
+ */
+export const lastDates = () => {
+  const dates = datesList();
+  const d = moment(dates[dates.length - 1]);
+  return d;
+}
+
 const initialState = {
   data: dataFakes.data,
   brokers: [...new Set(dataFakes.data.map(x => x.broker))],
-  startDate: undefined,
-  endDate: undefined,
-  broker: undefined
+  startDate: firstDate(),
+  endDate: lastDates(),
+  broker: undefined,
+  dates: datesList()
 };
 
 
@@ -57,8 +84,11 @@ const DataSlice = createSlice({
         return flag;
       });
     },
+    getDates: (state) => {
+      return state.dates;
+    }
   },
 });
 
-export const {  filterDate } = DataSlice.actions;
+export const {  filterDate, getDates } = DataSlice.actions;
 export default DataSlice.reducer;

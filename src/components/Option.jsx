@@ -10,14 +10,26 @@ import { AdapterDateFnsJalali } from "@mui/x-date-pickers/AdapterDateFnsJalali";
 import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
 import { useState, useEffect } from "react";
 import { removeWaterMark } from "../tools/ui";
-import moment from "jalali-moment";
+import moment from "moment";
 
 // eslint-disable-next-line react/prop-types
 const Option = ({ className }) => {
-  const { brokers } = useSelector((state) => state.allData);
+  const { brokers, dates, startDate, endDate } = useSelector((state) => state.allData);
 
   const dispatch = useDispatch();
   const [values, setValues] = useState([]);
+
+  useEffect(() => {
+    console.log(startDate.format(), endDate.format());
+  }, [startDate, endDate]); 
+
+  useEffect(() => {
+    console.log(dates[0], dates[dates.length - 1]);
+    if (!dates) return;
+    const lastDay = dates[dates.length - 1];
+    const prevDay = moment(lastDay).subtract(5, 'days').toDate();
+      setValues([prevDay.toString(), lastDay.toString()]);
+  }, [dates])
 
   const handleBrokerSelected = (e) => {
     dispatch(filterDate({ broker: e.target.value }));
@@ -36,7 +48,6 @@ const Option = ({ className }) => {
 
     dispatch(filterDate({ startDate, endDate }));
     dispatch(filterChart({ startDate, endDate }));
-    
   }, [values, dispatch]);
 
   return (
@@ -88,8 +99,9 @@ const Option = ({ className }) => {
       </FormControl>
       <LocalizationProvider dateAdapter={AdapterDateFnsJalali}>
         <DateRangePicker
-          onChange={(e) => setValues(e)}  
+          onChange={setValues}
           className="w-full"
+          defaultValue={[startDate.toDate(), endDate.toDate()]}
           localeText={{ start: "از تاریخ", end: "تا تاریخ" }}
         />
       </LocalizationProvider>

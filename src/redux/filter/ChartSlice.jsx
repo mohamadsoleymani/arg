@@ -1,12 +1,20 @@
 import { createSlice } from "@reduxjs/toolkit";
 import dataFakes from "../../dataChart.json";
 import moment from "jalali-moment";
+import { firstDate, lastDates } from "./DataSlice";
+
+/**
+ * @param {{startDate: string, endDate: string}} filter
+ */
+const filterData = (data, filter) => {
+
+}
 
 const initialState = {
   data: dataFakes.data,
   brokers: [...new Set(dataFakes.data.map(x => x.broker))],
-  startDate: undefined,
-  endDate: undefined,
+  startDate: firstDate(),
+  endDate: lastDates(),
   broker: undefined
 };
 
@@ -37,7 +45,7 @@ const ChartSlice = createSlice({
       // console.log(state.endDate, state.startDate);
 
       state.data = dataFakes.data.filter((item) => {
-        const date = moment(item.date,"jYYYY/jMM/jDD");
+        const date = moment(item.date, "jYYYY/jMM/jDD");
 
         let flag = true;
 
