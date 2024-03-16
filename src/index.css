@@ -9,3 +9,11 @@ body {
     font-style: normal;
     color: #2D3142;
   }
+
+.mantine-7ffr5w:last-child{
+  border-right: 0.0625rem solid #dee2e6;
+}
+
+/* .mantine-1qw5r5d:last-child {
+  border-right: 0.0625rem solid red;
+} */

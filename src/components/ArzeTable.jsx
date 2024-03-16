@@ -29,7 +29,7 @@ const columns = [
   },
   {
     accessorKey: "productVolume",
-    header: "حجم کالای قابل عرضه",
+    header: "حجم قابل عرضه",
   },
   {
     accessorKey: "price",
@@ -38,6 +38,9 @@ const columns = [
   {
     accessorKey: "unit",
     header: "واحد",
+    // accessorFn: (row) => {
+    //   return <span className="border border-r-2">{row.unit}</span>
+    // }
   },
 ];
 
@@ -55,10 +58,11 @@ const ArzeTable = () => {
       density: "xs",
     },
 
-    muiTableBodyCellProps: {
+    mantineTableBodyCellProps: {
       sx: {
         padding: "20px",
-        justifyContent: "flex-end",
+        justifyContent: "flex-start",
+        fontSize: "15px !important",
       },
     },
 
@@ -66,7 +70,6 @@ const ArzeTable = () => {
       sx: {
         fontFamily: "Yekan, sans-serif",
         color: "#2D3142",
-        fontSize:'1rem'
       },
     },
 
@@ -101,8 +104,11 @@ const ArzeTable = () => {
     mantinePaperProps: {
       style: { boxShadow: "none", border: "none", borderRadius: "0.5rem" },
     },
+
     mantineSearchTextInputProps: {
-      placeholder: "جستجو کنید",
+      placeholder: "جستجو کنید...",
+
+      styles: { input: { fontFamily: "Yekan, sans-serif" , textAlign:'right' } },
     },
   });
 

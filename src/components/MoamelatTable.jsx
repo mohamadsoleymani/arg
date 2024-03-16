@@ -70,10 +70,11 @@ const MoamelatTable = () => {
       density: "xs",
     },
 
-    muiTableBodyCellProps: {
+    mantineTableBodyCellProps: {
       sx: {
         padding: "20px",
-        justifyContent: "flex-end",
+        justifyContent: "flex-start",
+        fontSize: "15px !important",
       },
     },
 
@@ -82,27 +83,23 @@ const MoamelatTable = () => {
     mantinePaginationProps: {
       rowsPerPageOptions: ["20", "50", "100"],
       className: "active-pagination-table",
-      color:'#0069ff'
+      color: "#0069ff",
     },
 
     layoutMode: "grid",
 
-    muiTableProps: {
-      className: "mt-3",
-    },
-
     mantineTableBodyProps: {
       sx: {
         fontFamily: "Yekan, sans-serif",
-        color:'#2D3142'
+        color: "#2D3142",
       },
     },
 
-    mantineTableHeadProps:{
-      sx:{
+    mantineTableHeadProps: {
+      sx: {
         fontFamily: "Yekan, sans-serif",
-        color:'#2D3142'
-      }
+        color: "#2D3142",
+      },
     },
 
     paginationDisplayMode: "pages",
@@ -111,15 +108,18 @@ const MoamelatTable = () => {
     mantineTableProps: {
       highlightOnHover: true,
       withColumnBorders: true,
-      striped:true,
-      className:'mt-2',
+      striped: true,
+      className: "mt-2",
     },
 
     mantinePaperProps: {
       style: { boxShadow: "none", border: "none", borderRadius: "0.5rem" },
     },
     mantineSearchTextInputProps: {
-      placeholder: "جستجو کنید",
+      placeholder: "جستجو کنید...",
+      styles: {
+        input: { fontFamily: "Yekan, sans-serif", textAlign: "right" },
+      },
     },
   });
 
