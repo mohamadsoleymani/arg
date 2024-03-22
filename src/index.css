@@ -10,7 +10,7 @@ body {
     color: #2D3142;
   }
 
-.mantine-7ffr5w:last-child{
+.mantine-7ffr5w:last-of-type{
   border-right: 0.0625rem solid #dee2e6;
 }
 
