@@ -13,16 +13,16 @@ const columns = [
     header: "نام کالا",
   },
   {
+    accessorKey: "date", //access nested data with dot notation
+    header: "تاریخ معامله",
+  },
+  {
     accessorKey: "avregePrice", //access nested data with dot notation
     header: "قیمت میانگین",
   },
   {
     accessorKey: "arzePrice", //access nested data with dot notation
     header: "قیمت عرضه",
-  },
-  {
-    accessorKey: "date", //access nested data with dot notation
-    header: "تاریخ معامله",
   },
   {
     accessorFn: (row) => (

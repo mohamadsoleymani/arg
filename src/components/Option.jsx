@@ -14,7 +14,7 @@ import moment from "jalali-moment";
 
 // eslint-disable-next-line react/prop-types
 const Option = ({ className }) => {
-  const { brokers } = useSelector((state) => state.allData);
+  const { brokers, lastDateInList, firstDateInList } = useSelector((state) => state.allData);
 
   const dispatch = useDispatch();
   const [values, setValues] = useState([]);
@@ -25,18 +25,24 @@ const Option = ({ className }) => {
   };
 
   useEffect(() => {
+   if (!firstDateInList || !lastDateInList) return;
+   console.log(firstDateInList, lastDateInList);
+   setValues([moment(firstDateInList), moment(lastDateInList)]);
+  }, [firstDateInList, lastDateInList]);
+
+  useEffect(() => {
     let startDate = undefined;
     let endDate = undefined;
     removeWaterMark();
 
+    const valuesMap = values.map((value) => moment(value))
     if (values.length > 0 && values[0]) {
-      startDate = moment(values[0]).format('YYYY/MM/DD')
-      endDate = moment(values.length > 1 && values[1] ? values[1] : values[0]).format('YYYY/MM/DD')
+      startDate = valuesMap[0];
+      endDate = valuesMap.length > 1 ? valuesMap[1] : valuesMap[0];
     }
 
     dispatch(filterDate({ startDate, endDate }));
     dispatch(filterChart({ startDate, endDate }));
-    
   }, [values, dispatch]);
 
   return (
@@ -89,6 +95,7 @@ const Option = ({ className }) => {
       <LocalizationProvider dateAdapter={AdapterDateFnsJalali}>
         <DateRangePicker
           onChange={(e) => setValues(e)}  
+          value={[firstDateInList, lastDateInList]}
           className="w-full"
           localeText={{ start: "از تاریخ", end: "تا تاریخ" }}
         />

@@ -8,12 +8,12 @@ const columns = [
     header: "کارگزار",
   },
   {
-    accessorKey: "releaseDate",
-    header: "تاریخ عرضه ",
-  },
-  {
     accessorKey: "productName", //normal accessorKey
     header: "نام کالا",
+  },
+  {
+    accessorKey: "releaseDate",
+    header: "تاریخ عرضه ",
   },
   {
     accessorKey: "logo",
