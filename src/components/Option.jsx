@@ -26,7 +26,7 @@ const Option = ({ className }) => {
 
   useEffect(() => {
    if (!firstDateInList || !lastDateInList) return;
-   console.log(firstDateInList, lastDateInList);
+  //  console.log(firstDateInList, lastDateInList);
    setValues([moment(firstDateInList), moment(lastDateInList)]);
   }, [firstDateInList, lastDateInList]);
 

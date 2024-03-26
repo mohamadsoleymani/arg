@@ -62,6 +62,7 @@ const MoamelatTable = () => {
   const table = useMantineReactTable({
     columns,
     data: dataChart, //data must be memoized or stable (useState, useMemo, defined outside of this component, etc.)
+    // defaultColumn: { minSize: 40, maxSize: 1000, size: 180 }, 
 
     columnFilterDisplayMode: "popover",
     initialState: {

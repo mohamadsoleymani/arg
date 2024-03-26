@@ -2,7 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 import dataFakes from "../../dataChart.json";
 import moment from "jalali-moment";
 
-function getDaysBefore(date, days = 10) {
+function getDaysBefore(date, days = 5) {
   date.setDate(date.getDate() - days);
   return date;
 }
@@ -10,6 +10,7 @@ function getDaysBefore(date, days = 10) {
 /**
  * @returns {Date[]}
  */
+
 const datesList = () => {
   return dataFakes.data
     ?.map((data) => moment(data.date, "jYYYY/jMM/jDD").toDate())
@@ -41,11 +42,13 @@ const ChartSlice = createSlice({
   name: "data",
   initialState,
   reducers: {
+    
     /**
      *
      * @param {{broker?: string, endDate?: import("jalali-moment").Moment, startDate?: import("jalali-moment").Moment}} state
      * @param {{payload:{startDate?: string, endDate?: string, broker?: string}}} action
      */
+    
     filterChart: (state, action) => {
       moment.locale("fa");
       if (action.payload?.broker) {

@@ -10,10 +10,10 @@ body {
     color: #2D3142;
   }
 
-.mantine-7ffr5w:last-of-type{
+.mantine-1qw5r5d>thead>tr>th:last-of-type, .mantine-1qw5r5d>tbody>tr>td:last-of-type{
   border-right: 0.0625rem solid #dee2e6;
 }
 
-/* .mantine-1qw5r5d:last-child {
-  border-right: 0.0625rem solid red;
+/* .mantine-z650ba{
+  padding: '80px' ;
 } */

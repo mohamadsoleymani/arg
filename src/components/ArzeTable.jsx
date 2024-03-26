@@ -14,6 +14,7 @@ const columns = [
   {
     accessorKey: "releaseDate",
     header: "تاریخ عرضه ",
+    size:150
   },
   {
     accessorKey: "logo",
@@ -26,6 +27,7 @@ const columns = [
   {
     accessorKey: "producer",
     header: "تولید کننده",
+    size: 245
   },
   {
     accessorKey: "productVolume",
@@ -34,6 +36,7 @@ const columns = [
   {
     accessorKey: "price",
     header: "قیمت پایه",
+    size: 150
   },
   {
     accessorKey: "unit",
@@ -50,6 +53,8 @@ const ArzeTable = () => {
   const table = useMantineReactTable({
     columns,
     data, //data must be memoized or stable (useState, useMemo, defined outside of this component, etc.)
+    // enableColumnResizing: true,
+
 
     columnFilterDisplayMode: "popover",
     initialState: {

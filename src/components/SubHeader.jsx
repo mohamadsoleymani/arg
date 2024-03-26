@@ -15,7 +15,7 @@ const SubHeader = () => {
 
       <button
         onClick={opneNav}
-        className="md:hidden w-full flex justify-center bg-gray-100 my-2 items-center gap-2 border py-1 px-2 border-gray-700 rounded-md"
+        className="md:hidden w-full flex justify-center bg-gray-100 my-2 items-center gap-2 border py-1 px-2 border-gray-400 rounded-md"
       >
         <Filter size={26}/>
         <span>فیلتر</span>
