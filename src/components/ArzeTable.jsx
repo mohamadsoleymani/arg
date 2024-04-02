@@ -14,7 +14,7 @@ const columns = [
   {
     accessorKey: "releaseDate",
     header: "تاریخ عرضه ",
-    size:150
+    size:160
   },
   {
     accessorKey: "logo",
@@ -23,15 +23,17 @@ const columns = [
   {
     accessorKey: "packageType",
     header: "نوع بسته بندی",
+    size:200
   },
   {
     accessorKey: "producer",
     header: "تولید کننده",
-    size: 245
+    size: 275
   },
   {
     accessorKey: "productVolume",
     header: "حجم قابل عرضه",
+    size:200
   },
   {
     accessorKey: "price",
@@ -84,6 +86,7 @@ const ArzeTable = () => {
         color: "#2D3142",
       },
     },
+
 
     columnResizeDirection: "rtl",
     enableColumnResizing: true,
