@@ -1,6 +1,7 @@
 import { MantineReactTable, useMantineReactTable } from "mantine-react-table";
 // import { MRT_Localization_FA } from 'mantine-react-table/locales/fa';
 import { useSelector } from "react-redux";
+import moment from 'jalali-moment';
 
 const columns = [
   {
@@ -14,7 +15,8 @@ const columns = [
   {
     accessorKey: "releaseDate",
     header: "تاریخ عرضه ",
-    size:160
+    size:160,
+    accessorFn: (row) => moment(row.releaseDate).calendar(),
   },
   {
     accessorKey: "logo",

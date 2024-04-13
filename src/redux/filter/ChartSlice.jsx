@@ -27,8 +27,14 @@ const lastDate = () => {
   return result[result.length - 1];
 };
 
+const fetchData = () => {
+  const data = dataFakes.data?.map((data) => ({...data, date: moment(data.date, "jYYYY/jMM/jDD").toDate()}))
+  const d = data.sort((a, b) => a.date - b.date);
+  return d;
+};
+
 const initialState = {
-  data: dataFakes.data,
+  data: fetchData(),
   dates: dataFakes.data.map((data) => data.date).sort(),
   brokers: [...new Set(dataFakes.data.map((x) => x.broker))],
   lastDateInList: lastDate(),
@@ -66,8 +72,8 @@ const ChartSlice = createSlice({
 
       // console.log(state.endDate, state.startDate);
 
-      state.data = dataFakes.data.filter((item) => {
-        const date = moment(item.date, "jYYYY/jMM/jDD");
+      state.data = initialState.data.filter((item) => {
+        const date = moment(item.date);
 
         let flag = true;
 

@@ -9,6 +9,7 @@ import {
   ResponsiveContainer,
 } from "recharts";
 import { useSelector } from "react-redux";
+import moment from 'jalali-moment';
 
 const Chart = () => {
   const data = useSelector((state) => state.allDataChart.data);
@@ -29,7 +30,7 @@ const Chart = () => {
           
           barSize={50}
         >
-          <XAxis dataKey="date" padding={{ left: 0, right: 0 }} />
+          <XAxis dataKey="date" tickFormatter={x => moment(x).calendar()} padding={{ left: 0, right: 0 }} />
           <YAxis tickMargin={40} />
           <Tooltip />
           <Legend  />

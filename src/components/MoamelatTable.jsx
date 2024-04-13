@@ -2,6 +2,7 @@
 import { MantineReactTable, useMantineReactTable } from "mantine-react-table";
 import { useSelector } from "react-redux";
 import { Minus, TrendDown, TrendUp } from "iconsax-react";
+import moment from 'jalali-moment';
 
 const columns = [
   {
@@ -15,6 +16,7 @@ const columns = [
   {
     accessorKey: "date", //access nested data with dot notation
     header: "تاریخ معامله",
+    accessorFn: (row) => moment(row.date).calendar(),
   },
   {
     accessorKey: "avregePrice", //access nested data with dot notation

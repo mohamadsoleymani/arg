@@ -17,6 +17,12 @@ const datesList = () => {
     .sort((a, b) => a - b);
 };
 
+const fetchData = () => {
+  return dataFakes.data
+    ?.map(d => ({...d, releaseDate: moment(d.releaseDate, "jYYYY/jMM/jDD").toDate()}))
+    .sort((a, b) => a.releaseDate - b.releaseDate);
+}
+
 const firstDate = () => {
   const result = lastDate();
   return getDaysBefore(result);
@@ -28,7 +34,7 @@ const lastDate = () => {
 };
 
 const initialState = {
-  data: dataFakes.data,
+  data: fetchData(),
   dates: dataFakes.data.map((data) => data.releaseDate).sort(),
   brokers: [...new Set(dataFakes.data.map((x) => x.broker))],
   lastDateInList: lastDate(),
@@ -64,8 +70,8 @@ const DataSlice = createSlice({
       state.endDate = state.endDate?.set({ minute: 0, hour: 0, second: 0 });
       state.startDate = state.startDate?.set({ minute: 0, hour: 0, second: 0 });
 
-      state.data = dataFakes.data.filter((item) => {
-        const date = moment(item.releaseDate, "jYYYY/jMM/jDD");
+      state.data = initialState.data.filter((item) => {
+        const date = moment(item.releaseDate);
 
         let flag = true;
 
