@@ -19,9 +19,12 @@ const datesList = () => {
 
 const fetchData = () => {
   return dataFakes.data
-    ?.map(d => ({...d, releaseDate: moment(d.releaseDate, "jYYYY/jMM/jDD").toDate()}))
+    ?.map((d) => ({
+      ...d,
+      releaseDate: moment(d.releaseDate, "jYYYY/jMM/jDD").toDate(),
+    }))
     .sort((a, b) => a.releaseDate - b.releaseDate);
-}
+};
 
 const firstDate = () => {
   const result = lastDate();
@@ -48,7 +51,6 @@ const DataSlice = createSlice({
   name: "data",
   initialState,
   reducers: {
-
     /**
      *
      * @param {{broker?: string, endDate?: import("jalali-moment").Moment, startDate?: import("jalali-moment").Moment}} state

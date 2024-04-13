@@ -11,6 +11,7 @@ const columns = [
   {
     accessorKey: "productName", //normal accessorKey
     header: "نام کالا",
+    size:200,
   },
   {
     accessorKey: "releaseDate",
@@ -78,14 +79,14 @@ const ArzeTable = () => {
     mantineTableBodyProps: {
       sx: {
         fontFamily: "Yekan, sans-serif",
-        color: "#2D3142",
+        color: "#231f20",
       },
     },
 
     mantineTableHeadProps: {
       sx: {
         fontFamily: "Yekan, sans-serif",
-        color: "#2D3142",
+        color: "#231f20",
       },
     },
 
@@ -95,8 +96,8 @@ const ArzeTable = () => {
     mantinePaginationProps: {
       rowsPerPageOptions: ["20", "50", "100"],
       className: "active-pagination-table",
-      color: "#0069ff",
-      //showRowsPerPage:false
+      color: "#ed1c24",
+      showRowsPerPage:false
     },
 
     layoutMode: "grid",

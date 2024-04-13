@@ -28,7 +28,10 @@ const lastDate = () => {
 };
 
 const fetchData = () => {
-  const data = dataFakes.data?.map((data) => ({...data, date: moment(data.date, "jYYYY/jMM/jDD").toDate()}))
+  const data = dataFakes.data?.map((data) => ({
+    ...data,
+    date: moment(data.date, "jYYYY/jMM/jDD").toDate(),
+  }));
   const d = data.sort((a, b) => a.date - b.date);
   return d;
 };
@@ -48,13 +51,12 @@ const ChartSlice = createSlice({
   name: "data",
   initialState,
   reducers: {
-    
     /**
      *
      * @param {{broker?: string, endDate?: import("jalali-moment").Moment, startDate?: import("jalali-moment").Moment}} state
      * @param {{payload:{startDate?: string, endDate?: string, broker?: string}}} action
      */
-    
+
     filterChart: (state, action) => {
       moment.locale("fa");
       if (action.payload?.broker) {
@@ -101,7 +103,6 @@ const ChartSlice = createSlice({
 
 export const { filterChart } = ChartSlice.actions;
 export default ChartSlice.reducer;
-
 
 // import { createSlice } from "@reduxjs/toolkit";
 // import dataFakes from "../../dataChart.json";

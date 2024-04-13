@@ -32,10 +32,10 @@ const Chart = () => {
         >
           <XAxis dataKey="date" tickFormatter={x => moment(x).calendar()} padding={{ left: 0, right: 0 }} />
           <YAxis tickMargin={40} />
-          <Tooltip />
-          <Legend  />
+          <Tooltip labelFormatter={x => moment(x).calendar()}/>
+          <Legend />
           <CartesianGrid strokeDasharray="3 3" />
-          <Bar dataKey="arzePrice" fill="#0069ff" name=" قیمت عرضه "/>
+          <Bar dataKey="arzePrice" fill="#9AADBF" name=" قیمت عرضه "/>
         </BarChart>
       </ResponsiveContainer>
     </div>
