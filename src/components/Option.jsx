@@ -105,6 +105,11 @@ const Option = ({ className }) => {
       </FormControl>
       <LocalizationProvider dateAdapter={AdapterDateFnsJalali}>
         <DateRangePicker
+        sx={{
+          "& .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline": {
+            borderColor: 'red', // Border color when active
+          },
+        }}
           onChange={(e) => setValues(e)}  
           // value={[firstDateInList, lastDateInList]}
           value={values}

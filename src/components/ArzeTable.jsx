@@ -1,4 +1,4 @@
-import { MantineReactTable, useMantineReactTable } from "mantine-react-table";
+import { MantineReactTable, useMantineReactTable} from "mantine-react-table";
 // import { MRT_Localization_FA } from 'mantine-react-table/locales/fa';
 import { useSelector } from "react-redux";
 import moment from 'jalali-moment';
@@ -96,9 +96,12 @@ const ArzeTable = () => {
     mantinePaginationProps: {
       rowsPerPageOptions: ["20", "50", "100"],
       className: "active-pagination-table",
-      color: "#ed1c24",
-      showRowsPerPage:false
+      size:'sm',
+      // labelRowsPerPage:"ردیف‌ها در هر صفحه:"
+      //showRowsPerPage:false
     },
+
+    rowsPerPageText: 'pkp',
 
     layoutMode: "grid",
 
@@ -112,6 +115,8 @@ const ArzeTable = () => {
       className: "mt-2",
     },
 
+    noResulteText: 'jiokj',
+    
     mantinePaperProps: {
       style: { boxShadow: "none", border: "none", borderRadius: "0.5rem" },
     },

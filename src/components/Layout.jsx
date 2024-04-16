@@ -12,9 +12,9 @@ const theme = (outerTheme) =>
     direction: "rtl",
     palette: {
       mode: outerTheme.palette.mode,
-      // primary: {
-      //   main : '#2D3142'
-      // }
+      primary: {
+        main : '#ed1c24'
+      }
     },
     typography: {
       fontFamily: "Yekan, sans-serif",

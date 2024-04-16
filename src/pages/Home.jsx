@@ -1,4 +1,4 @@
-import empty from "../assets/7486744.png";
+import empty from "../assets/empty-box.png";
 import { useSelector } from "react-redux";
 import ArzeTable from "../components/ArzeTable";
 
@@ -12,8 +12,8 @@ const Home = () => {
         <ArzeTable />
       ) : (
         <div className="flex flex-col items-center">
-          <img src={empty} className="w-[150px] h-[150px] sm:w-[250px] sm:h-[250px] mt-20"></img>
-          <p className="text-sm font-bold mt-5 sm:text-lg">اطلاعات مورد نظر در این بازه زمانی وجود ندارد</p>
+          <img src={empty} className="w-[150px] h-[150px] sm:w-[250px] sm:h-[250px] max-sm:mt-[10rem] mt-20"></img>
+          <p className="text-sm font-bold mt-5 sm:text-lg text-espandarBlack">اطلاعات مورد نظر در این بازه زمانی وجود ندارد</p>
         </div>
       )}
     </div>
