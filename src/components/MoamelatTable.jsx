@@ -3,6 +3,8 @@ import { MantineReactTable, useMantineReactTable } from "mantine-react-table";
 import { useSelector } from "react-redux";
 import { Minus, TrendDown, TrendUp } from "iconsax-react";
 import moment from 'jalali-moment';
+import {MantineProvider, useMantineTheme} from '@mantine/core';
+
 
 const columns = [
   {
@@ -60,6 +62,7 @@ const columns = [
 
 const MoamelatTable = () => {
   const dataChart = useSelector((state) => state.allDataChart.data);
+  const globalTheme = useMantineTheme()
 
   const table = useMantineReactTable({
     columns,
@@ -81,12 +84,13 @@ const MoamelatTable = () => {
       },
     },
 
-    columnResizeDirection: "rtl",
+    // columnResizeDirection: "rtl",
     enableColumnResizing: true,
     mantinePaginationProps: {
       rowsPerPageOptions: ["20", "50", "100"],
       className: "active-pagination-table",
       size:'sm',
+      dir:'ltr'
     },
 
     layoutMode: "grid",
@@ -127,9 +131,16 @@ const MoamelatTable = () => {
   });
 
   return (
-    <div className="my-5">
-      <MantineReactTable table={table} enableStickyFooter />
-    </div>
+      <MantineProvider
+          theme={{...globalTheme, primaryColor: 'red', primaryShade: 7}}>
+        <div className="my-5">
+          <MantineReactTable
+              table={table}
+              enableStickyFooter
+              // localization={MRT_Localization_FA}
+          />
+        </div>
+      </MantineProvider>
   );
 };
 

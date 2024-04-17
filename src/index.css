@@ -14,18 +14,31 @@ body {
   border-right: 0.0625rem solid #dee2e6;
 }
 
-.mantine-wxitg4[data-active],.mantine-wxitg4[data-active]:not([data-disabled]):hover{
-  background-color: #ed1c24;
-}
+/*.mantine-wxitg4[data-active],.mantine-wxitg4[data-active]:not([data-disabled]):hover{*/
+/*  background-color: #ed1c24;*/
+/*}*/
 
-.mantine-1cn2mlo:focus, .mantine-1cn2mlo:focus-within{
-  border-color: #ed1c24;
-}
+
+/*.mantine-1cn2mlo:focus, .mantine-1cn2mlo:focus-within{*/
+/*  border-color: #ed1c24;*/
+/*}*/
 
 .mantine-1fzet7j{
   display: none;
 }
 
+/*.mantine-3dhyzu{*/
+/*    display: none;*/
+/*}*/
+
+/*.MuiTypography-root{*/
+/*    display: none;*/
+/*}*/
+
+/*.mantine-895api:not([data-disabled]):hover{*/
+/*    background-color: #ed1c24;*/
+/*    color: #fff;*/
+/*}*/
 
 
 /* .mantine-z650ba{

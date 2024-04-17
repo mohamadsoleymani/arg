@@ -29,7 +29,7 @@ const Header = () => {
       <div className="flex m-auto sm:mx-[1px] gap-5 font-bold">
         <EspandarLogo/>
       </div>
-      <div className="flex sm:gap-2 max-sm:fixed bottom-0 left-0 right-0 z-10 max-sm:shadow-">
+      <div className="flex sm:gap-2 max-sm:fixed bottom-0 left-0 right-0 z-10 max-sm:shadow">
         <NavItem url="/" text="اطلاعات عرضه" icon={<Note />} />
         <NavItem
           url="/moamelat"
