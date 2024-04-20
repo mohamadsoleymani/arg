@@ -11,6 +11,10 @@ export default {
         // textPrimary: '#2D3142'
         espandarRed:'#ed1c24',
         espandarBlack: '#231f20'
+      },
+      fontFamily:{
+        Yekan:['Yekan', 'sans-serif'],
+        Poppins:['Poppins','sans-serif'],
       }
     },
   },

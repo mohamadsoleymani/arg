@@ -15,7 +15,7 @@ const Chart = () => {
   const data = useSelector((state) => state.allDataChart.data);
   
   return (
-    <div className="h-[500px]">
+    <div className="h-[500px] font-Poppins" >
       <ResponsiveContainer width="100%" height="100%">
         <BarChart
           width={600}

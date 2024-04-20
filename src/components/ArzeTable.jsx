@@ -1,7 +1,7 @@
 import {MantineReactTable, useMantineReactTable} from "mantine-react-table";
 import {MantineProvider, useMantineTheme} from '@mantine/core';
 
-// import { MRT_Localization_FA } from 'mantine-react-table/locales/fa';
+import { MRT_Localization_FA } from 'mantine-react-table/locales/fa';
 import {useSelector} from "react-redux";
 import moment from 'jalali-moment';
 
@@ -33,7 +33,7 @@ const columns = [
     {
         accessorKey: "producer",
         header: "تولید کننده",
-        size: 275
+        size: 250
     },
     {
         accessorKey: "productVolume",
@@ -59,6 +59,7 @@ const ArzeTable = () => {
     const globalTheme = useMantineTheme()
 
     const table = useMantineReactTable({
+        localization:MRT_Localization_FA,
         columns,
         data, //data must be memoized or stable (useState, useMemo, defined outside of this component, etc.)
         // enableColumnResizing: true,
@@ -71,25 +72,27 @@ const ArzeTable = () => {
             density: "xs",
         },
 
+
         mantineTableBodyCellProps: {
             sx: {
                 padding: "20px",
                 justifyContent: "flex-start",
-                fontSize: "15px !important",
+                fontSize: "17px !important",
             },
         },
+
 
         mantineTableBodyProps: {
             sx: {
-                fontFamily: "Yekan, sans-serif",
                 color: "#231f20",
             },
+            className:'font-Yekan font-Poppins'
         },
 
-        mantineTableHeadProps: {
+        mantineTableHeadCellProps: {
             sx: {
-                fontFamily: "Yekan, sans-serif",
-                color: "#231f20",
+                fontFamily: "Yekan",
+                fontSize: "18px !important",
             },
         },
 
@@ -113,6 +116,8 @@ const ArzeTable = () => {
         mantineTableProps: {
             highlightOnHover: true,
             withColumnBorders: true,
+            withTableBorder:true,
+            withRowBorders:true,
             striped: true,
             className: "mt-2",
         },
@@ -124,7 +129,7 @@ const ArzeTable = () => {
         mantineSearchTextInputProps: {
             placeholder: "جستجو کنید...",
 
-            styles: {input: {fontFamily: "Yekan, sans-serif", textAlign: 'right'}},
+            styles: {input: {fontFamily: "Yekan", textAlign: 'right'}},
         },
     });
 

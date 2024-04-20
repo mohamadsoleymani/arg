@@ -14,7 +14,7 @@ const NavItem = ({ text, url, icon }) => {
         {
           "!bg-espandarRed !border-espandarRed !text-white": pathname === url,
         },
-        "sm:w-fit sm:flex hover:shadow-lg hover:shadow-gray-300 sm:gap-3 sm:items-center sm:justify-center sm:bg-transparent max-sm:flex max-sm:gap-2 max-sm:items-center max-sm:justify-center max-sm:bg-white max-sm:p-2 max-sm:w-[20rem] max-sm:border-gray-200 max-sm:rounded-none max-sm:  text-center text-[10px] sm:text-[15px] hover:bg-espandarRed  text-espandarBlack hover:text-white py-2 px-7 border border-espandarBlack transition-all hover:border-transparent sm:rounded-[4px]"
+        "sm:w-fit sm:flex hover:shadow-lg hover:shadow-gray-300 sm:gap-3 sm:items-center sm:justify-center sm:bg-transparent max-sm:flex max-sm:gap-2 max-sm:items-center max-sm:justify-center max-sm:bg-white max-sm:p-2 max-sm:w-[20rem] max-sm:border-gray-200 max-sm:rounded-none max-sm:  text-center text-[14px] sm:text-[17px] hover:bg-espandarRed  text-espandarBlack hover:text-white py-2 px-7 border border-espandarBlack transition-all hover:border-transparent sm:rounded-[4px]"
       )}
     >
       {icon}
@@ -29,7 +29,7 @@ const Header = () => {
       <div className="flex m-auto sm:mx-[1px] gap-5 font-bold">
         <EspandarLogo/>
       </div>
-      <div className="flex sm:gap-2 max-sm:fixed bottom-0 left-0 right-0 z-10 max-sm:shadow">
+      <div className="flex sm:gap-2 max-sm:fixed bottom-0 left-0 right-0 z-10 max-sm:shadow" style={{fontFamily:'Yekan'}}>
         <NavItem url="/" text="اطلاعات عرضه" icon={<Note />} />
         <NavItem
           url="/moamelat"

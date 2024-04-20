@@ -1,18 +1,35 @@
-@import url('https://v1.fontapi.ir/css/Yekan');
+/*@import url('https://v1.fontapi.ir/css/Yekan');*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 body {
-    font-family: Yekan, sans-serif;
-    font-style: normal;
-    color: #2D3142;
-  }
+    color: #231f20;
+}
+
+@font-face {
+    font-family: "Yekan";
+    src: url('./assets/font/Yekan.woff') format('woff'),
+    url('./assets/font/Yekan.woff2') format('woff2');
+    /*src: url("./assets/font/Yekan.ttf");*/
+    font-display: swap;
+}
 
 .mantine-1qw5r5d>thead>tr>th:last-of-type, .mantine-1qw5r5d>tbody>tr>td:last-of-type{
   border-right: 0.0625rem solid #dee2e6;
 }
+
+.mantine-1uskmy4{
+    color: #231f20;
+}
+
+.muirtl-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input {
+    font-family: Poppins;
+}
+
+
 
 /*.mantine-wxitg4[data-active],.mantine-wxitg4[data-active]:not([data-disabled]):hover{*/
 /*  background-color: #ed1c24;*/
@@ -23,9 +40,9 @@ body {
 /*  border-color: #ed1c24;*/
 /*}*/
 
-.mantine-1fzet7j{
-  display: none;
-}
+/*.mantine-1fzet7j{*/
+/*  display: none;*/
+/*}*/
 
 /*.mantine-3dhyzu{*/
 /*    display: none;*/
@@ -34,6 +51,7 @@ body {
 /*.MuiTypography-root{*/
 /*    display: none;*/
 /*}*/
+
 
 /*.mantine-895api:not([data-disabled]):hover{*/
 /*    background-color: #ed1c24;*/
@@ -44,3 +62,6 @@ body {
 /* .mantine-z650ba{
   padding: '80px' ;
 } */
+/*.mantine-TableHeadCell-Content-Wrapper, .mantine-sbksmd{*/
+/*    font-family: "Yekan","Poppins" ,sans-serif !important;*/
+/*}*/

@@ -1,5 +1,6 @@
 /* eslint-disable no-undef */
 import { MantineReactTable, useMantineReactTable } from "mantine-react-table";
+import { MRT_Localization_FA } from 'mantine-react-table/locales/fa';
 import { useSelector } from "react-redux";
 import { Minus, TrendDown, TrendUp } from "iconsax-react";
 import moment from 'jalali-moment';
@@ -65,6 +66,7 @@ const MoamelatTable = () => {
   const globalTheme = useMantineTheme()
 
   const table = useMantineReactTable({
+    localization:MRT_Localization_FA,
     columns,
     data: dataChart, //data must be memoized or stable (useState, useMemo, defined outside of this component, etc.)
     // defaultColumn: { minSize: 40, maxSize: 1000, size: 180 }, 
@@ -80,7 +82,7 @@ const MoamelatTable = () => {
       sx: {
         padding: "20px",
         justifyContent: "flex-start",
-        fontSize: "15px !important",
+        fontSize: "17px !important",
       },
     },
 
@@ -97,15 +99,22 @@ const MoamelatTable = () => {
 
     mantineTableBodyProps: {
       sx: {
-        fontFamily: "Yekan, sans-serif",
         color: "#231f20",
       },
+      className:'font-Yekan font-Poppins'
     },
 
     mantineTableHeadProps: {
       sx: {
-        fontFamily: "Yekan, sans-serif",
+        fontFamily: "Yekan",
         color: "#231f20",
+      },
+    },
+
+    mantineTableHeadCellProps: {
+      sx: {
+        fontFamily: "Yekan",
+        fontSize: "18px !important",
       },
     },
 
@@ -115,8 +124,9 @@ const MoamelatTable = () => {
     mantineTableProps: {
       highlightOnHover: true,
       withColumnBorders: true,
+      // withBorder:true,
       striped: true,
-      className: "mt-2",
+      className: "mt-5",
     },
 
     mantinePaperProps: {
@@ -125,7 +135,7 @@ const MoamelatTable = () => {
     mantineSearchTextInputProps: {
       placeholder: "جستجو کنید...",
       styles: {
-        input: { fontFamily: "Yekan, sans-serif", textAlign: "right" },
+        input: { fontFamily: "Yekan", textAlign: "right" },
       },
     },
   });

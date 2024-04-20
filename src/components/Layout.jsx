@@ -17,7 +17,7 @@ const theme = (outerTheme) =>
       }
     },
     typography: {
-      fontFamily: "Yekan, sans-serif",
+      fontFamily: "Yekan"
     },
   });
 
