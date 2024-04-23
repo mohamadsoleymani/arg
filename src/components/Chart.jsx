@@ -15,7 +15,7 @@ const Chart = () => {
   const data = useSelector((state) => state.allDataChart.data);
   
   return (
-    <div className="h-[500px] font-Poppins" >
+    <div className="h-[500px] font-Yekan" >
       <ResponsiveContainer width="100%" height="100%">
         <BarChart
           width={600}
@@ -31,7 +31,7 @@ const Chart = () => {
           barSize={50}
         >
           <XAxis dataKey="date" tickFormatter={x => moment(x).calendar()} padding={{ left: 0, right: 0 }} />
-          <YAxis tickMargin={40} />
+          <YAxis tickMargin={50} />
           <Tooltip labelFormatter={x => moment(x).calendar()}/>
           <Legend />
           <CartesianGrid strokeDasharray="3 3" />

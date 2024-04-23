@@ -17,7 +17,7 @@ const theme = (outerTheme) =>
       }
     },
     typography: {
-      fontFamily: "Yekan"
+      fontFamily: 'Yekan , Poppins',
     },
   });
 

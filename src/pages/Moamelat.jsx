@@ -15,7 +15,7 @@ const Moamelat = () => {
       ) : (
         <div className="flex flex-col items-center">
           <img src={empty} className="w-[150px] h-[150px] sm:w-[250px] sm:h-[250px] max-sm:mt-[10rem] mt-20"></img>
-          <p className="text-sm font-bold mt-5 sm:text-lg text-espandarBlack">اطلاعات مورد نظر در این بازه زمانی وجود ندارد</p>
+          <p className="text-sm font-Yekan mt-5 sm:text-xl text-espandarBlack">اطلاعات مورد نظر در این بازه زمانی وجود ندارد</p>
         </div>
       )}
     </div>

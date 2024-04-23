@@ -24,6 +24,7 @@ const columns = [
     {
         accessorKey: "logo",
         header: "نماد",
+        size: 210
     },
     {
         accessorKey: "packageType",
@@ -77,7 +78,7 @@ const ArzeTable = () => {
             sx: {
                 padding: "20px",
                 justifyContent: "flex-start",
-                fontSize: "17px !important",
+                fontSize: "16px !important",
             },
         },
 
@@ -86,7 +87,7 @@ const ArzeTable = () => {
             sx: {
                 color: "#231f20",
             },
-            className:'font-Yekan font-Poppins'
+            className:'font-Yekan'
         },
 
         mantineTableHeadCellProps: {
@@ -116,8 +117,8 @@ const ArzeTable = () => {
         mantineTableProps: {
             highlightOnHover: true,
             withColumnBorders: true,
-            withTableBorder:true,
-            withRowBorders:true,
+            // withTableBorder:true,
+            // withRowBorders:true,
             striped: true,
             className: "mt-2",
         },

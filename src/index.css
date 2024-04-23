@@ -13,7 +13,6 @@ body {
     font-family: "Yekan";
     src: url('./assets/font/Yekan.woff') format('woff'),
     url('./assets/font/Yekan.woff2') format('woff2');
-    /*src: url("./assets/font/Yekan.ttf");*/
     font-display: swap;
 }
 
@@ -25,10 +24,30 @@ body {
     color: #231f20;
 }
 
-.muirtl-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input {
-    font-family: Poppins;
+/*.muirtl-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input {*/
+/*    font-family: Poppins;*/
+/*}*/
+
+.mantine-1qw5r5d>thead>tr>th, .mantine-1qw5r5d>tbody>tr>td{
+    border-top: 0.0625rem solid #dee2e6;
 }
 
+.mantine-1fzet7j{
+    font-family: "Yekan";
+    font-size: 15px;
+}
+
+.mantine-3dhyzu{
+    font-family: "Yekan";
+}
+
+.mantine-2udo7l{
+    font-family: "Yekan";
+}
+
+/*.muirtl-138poq7-MuiPickersSlideTransition-root-MuiDayCalendar-slideTransition:not(.MuiDateRangeCalendar-dayDragging) .MuiDateRangePickerDay-dayOutsideRangeInterval{*/
+/*    font-family: Poppins, sans-serif;*/
+/*}*/
 
 
 /*.mantine-wxitg4[data-active],.mantine-wxitg4[data-active]:not([data-disabled]):hover{*/

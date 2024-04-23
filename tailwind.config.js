@@ -13,8 +13,8 @@ export default {
         espandarBlack: '#231f20'
       },
       fontFamily:{
-        Yekan:['Yekan', 'sans-serif'],
-        Poppins:['Poppins','sans-serif'],
+        Yekan:['Yekan', 'Poppins'],
+        // Poppins:['Poppins','sans-serif'],
       }
     },
   },
